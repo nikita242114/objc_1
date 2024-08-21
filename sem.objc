@@ -1,0 +1,66 @@
+#import <Foundation/Foundation.h>
+#import <math.h>
+
+int main(int argc, const char * argv[]) {
+    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
+
+    // Решение уравнения x^2 - 8x + 12 = 0
+    double a1 = 1.0;
+    double b1 = -8.0;
+    double c1 = 12.0;
+
+    double d1 = b1 * b1 - 4 * a1 * c1;
+    if (d1 >= 0) {
+        double x1 = (-b1 + sqrt(d1)) / (2 * a1);
+        double x2 = (-b1 - sqrt(d1)) / (2 * a1);
+        NSLog(@"Решение уравнения x^2 - 8x + 12 = 0: x1 = %f, x2 = %f", x1, x2);
+    } else {
+        NSLog(@"Уравнение x^2 - 8x + 12 = 0 не имеет действительных корней");
+    }
+
+    // Решение уравнения 12x^2 - 4x + 2 = 0
+    double a2 = 12.0;
+    double b2 = -4.0;
+    double c2 = 2.0;
+
+    double d2 = b2 * b2 - 4 * a2 * c2;
+    if (d2 >= 0) {
+        double x3 = (-b2 + sqrt(d2)) / (2 * a2);
+        double x4 = (-b2 - sqrt(d2)) / (2 * a2);
+        NSLog(@"Решение уравнения 12x^2 - 4x + 2 = 0: x1 = %f, x2 = %f", x3, x4);
+    } else {
+        NSLog(@"Уравнение 12x^2 - 4x + 2 = 0 не имеет действительных корней");
+    }
+
+    // Решение уравнения x^2 - 100x - 2 = 0
+    double a3 = 1.0;
+    double b3 = -100.0;
+    double c3 = -2.0;
+
+    double d3 = b3 * b3 - 4 * a3 * c3;
+    if (d3 >= 0) {
+        double x5 = (-b3 + sqrt(d3)) / (2 * a3);
+        double x6 = (-b3 - sqrt(d3)) / (2 * a3);
+        NSLog(@"Решение уравнения x^2 - 100x - 2 = 0: x1 = %f, x2 = %f", x5, x6);
+    } else {
+        NSLog(@"Уравнение x^2 - 100x - 2 = 0 не имеет действительных корней");
+    }
+
+    // Нахождение наибольшего числа среди трех чисел
+    double number1 = 10.5;
+    double number2 = 20.3;
+    double number3 = 15.8;
+
+    double maxNumber = number1;
+    if (number2 > maxNumber) {
+        maxNumber = number2;
+    }
+    if (number3 > maxNumber) {
+        maxNumber = number3;
+    }
+
+    NSLog(@"Наибольшее число среди %f, %f и %f: %f", number1, number2, number3, maxNumber);
+
+    [pool drain];
+    return 0;
+}
